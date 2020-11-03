@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.home_img {
+    cursor: pointer;
+    width: 100%;
+    height: 500px;
+}
+
+.home_img img {
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    z-index: -1;
+}
+
+.wrapper {
+    padding: 20px 50px;
+}
+
+.wrapper .titel {
+    font-size: 48px;
+    font-weight: 600px;
+    margin-bottom: 10px;
+}
+
+.wrapper p {
+    text-align: justify;
+    padding: 0 0 20px 0;
+}
+
+.counter_up {
+    background-color: black;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+.counter_up::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.counter_up .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.content .box {
+    width: calc(25% - 30px);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    flex-direction: column;
+    border: 1px dashed rgba(255, 255, 255, 0.6);
+}
+
+.content .box .icon {
+    font-size: 48px;
+    color: #e6e6e6;
+}
+
+.content .box .counter {
+    font-size: 50px;
+    color: #f2f2f2;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.content .box .text {
+    color: #cccccc;
+    font-weight: 400;
+}
+
+@media (max-width: 1036px) {
+    .counter_up {
+        padding: 50px 50px 0px 50px;
+    }
+    .content .box {
+        width: calc(50% - 30px);
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 583px) {
+    .counter_up {
+        padding: 50px 0px 0px 50px;
+    }
+    .content .box {
+        width: calc(100% - 50px);
+        margin-bottom: 50px;
+    }
+}
